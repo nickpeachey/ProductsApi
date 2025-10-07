@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003
+      author: nick
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: title
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rank
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropColumn:
+            columnName: title, rank
+            tableName: users

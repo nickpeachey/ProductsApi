@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002
+      author: nick
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: age
+                  type: INT
+                  defaultValueNumeric: 0
+      rollback:
+        - dropColumn:
+            columnName: age
+            tableName: users

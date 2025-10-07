@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: 001-create-user-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 002-add-age-column.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 003-add-title-column.yaml
+      relativeToChangelogFile: true
