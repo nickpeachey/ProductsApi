@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: dotnet-api
-          image: nickpeachey/productsapi:0.1
+          image: nickpeachey/client-app:latest
           ports:
             - containerPort: 80
