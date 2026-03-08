@@ -2,16 +2,15 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: dotnet-api-ingress
-  namespace: default
 spec:
+  ingressClassName: nginx
   rules:
-    - host: dotnet-api.local
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: dotnet-api
+                name: dotnet-api-service
                 port:
                   number: 80
